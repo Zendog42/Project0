@@ -4,13 +4,25 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to CoffeeTalk - talk amonsgt yourselves.");
-            
+            // Global variables
+            bool quit = false;
+            string cmd = "";
+
+            // Initial game setup
+            Console.Clear();
+            CmdHandler parser = new CmdHandler();
             Room[,] levelMap = Setup.Rooms();
-            Setup.Objects();
+            Object[] objects = Setup.Objects();
             Player player1 = Setup.Player();
 
-            DisplayRoom();
+            
+            //Main Game Loop
+            while(quit == false)
+            {
+                DisplayRoom();
+                Console.Write("Command: ");
+                cmd = Console.ReadLine().ToUpper();
+            }
             
             
             void DisplayRoom()
@@ -18,6 +30,7 @@
                 Console.WriteLine(levelMap[player1.px,player1.py].title);
                 Console.WriteLine(levelMap[player1.px,player1.py].detail);
             }
+            
            
         }
 
