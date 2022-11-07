@@ -102,8 +102,8 @@ static class Setup
     public static Player Player()
     {
         Player player = new Player();
-        player.px = 0;
-        player.py = 0;
+        player.locX = 0;
+        player.locY = 0;
 
         return player;
     }
