@@ -31,6 +31,18 @@
                     // PlayerMove();
                 }
 
+                else if(cmd == "Q")
+                {
+                    quit = player1.PlayerQuit();
+                }
+
+                else
+                {
+                    Console.WriteLine("I don't recognize that as a command.");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                }
+
                 // is this an attack command?
                 // if()
 
@@ -42,10 +54,14 @@
             
             
             void DisplayRoom()
-            {
+            {   
                 Console.WriteLine(levelMap[player1.locX,player1.locY].title);
                 Console.WriteLine(levelMap[player1.locX,player1.locY].detail);
-                Console.WriteLine("Obvious exits are: " + levelMap[player1.locX,player1.locY].exits[]);
+                Console.Write("Obvious exits are: ");
+                foreach(string exit in levelMap[player1.locX, player1.locY].exits)
+                {
+                    Console.WriteLine(exit + " ");
+                }
             }
 
                         

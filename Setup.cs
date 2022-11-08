@@ -102,8 +102,8 @@ static class Setup
     public static Player Player()
     {
         Player player = new Player();
-        player.locX = 0;
-        player.locY = 0;
+        player.locX = 1;
+        player.locY = 1;
 
         return player;
     }
