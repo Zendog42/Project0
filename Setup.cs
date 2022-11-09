@@ -66,25 +66,29 @@ static class Setup
             // Back Door
             levelMap[2,0] = new Room();
             levelMap[2,0].title = "Back Door";
-            levelMap[2,0].detail = "A two-story white house stands here; large screen panels enclose an exposed room, and french doors are visible\n" +
-                                    "leading further into the house. At the far corner, a small back door breaks the uniformity of rotting paint and ancient wood.\n" + 
-                                    "The door is tightly locked, and there is currently no discernable method to open it. North of here, a densely wooded ravine beckons.\n";
+            levelMap[2,0].detail = "A two-story white house stands here; large screens enclose a , and french doors are visible\n" +
+                                    "leading further into the house. At the far corner, a small back door breaks the uniformity of\n" +
+                                    "rotting paint and ancient wood. The door is tightly locked, and there is currently no discernable\n" + 
+                                    "method to open it. North of here, a densely wooded ravine beckons.\n";
             levelMap[2,0].exits = new string[] {"North","East"};
 
             // Driveway
             levelMap[2,1] = new Room();
             levelMap[2,1].title = "Driveway";
-            levelMap[2,1].detail = "A wide driveway wanders away from the double sliding barn doors of the rickety garage. Dusty hardpan peeks up here and there\n" +
-                                    "through the patchy covering of whitish pea-gravel. Tufts of grass struggle to pull enough moisture from the impacted dirt and the wafting\n" +
-                                    "smell of rotting vegetation, cut grass, school lunches, manure, and a mediocre future alternatively entrance and repulse the senses.\n";
+            levelMap[2,1].detail = "A wide driveway wanders away from the double sliding barn doors of the rickety garage.\n" +
+                                    "Dusty hardpan peeks up here and there through the patchy covering of whitish pea-gravel.\n"+
+                                    "Tufts of grass struggle to pull enough moisture from the impacted dirt and the wafting\n" +
+                                    "smell of rotting vegetation, cut grass, school lunches, manure, and a mediocre future\n" +
+                                    "alternatively entice and repulse the senses.\n";
             levelMap[2,1].exits=new string[] {"North","West","East"};
 
             // Sloping Hill
             levelMap[2,2] = new Room();
             levelMap[2,2].title = "Sloping Hill";
-            levelMap[2,2].detail = "A low, sloping hill slopes off to the distance. The featureless landscape stretching in every direction seems to absorb interest\n" +
-                                    "in exactly the same way acoutsic foam absorbs sound. A few dozen yards away to the north there seems to be a small brick structure, \n" +
-                                    "a three-sided construct, standing roughly knee-high.\n";
+            levelMap[2,2].detail = "A low, sloping hill slopes off to the distance.\n" +
+                                    "The featureless landscape stretching in every direction seems to absorb interest\n" +
+                                    "in exactly the same way acoutsic foam absorbs sound. A few dozen yards away to the north\n" +
+                                    "there seems to be a small brick firepit, standing roughly knee-high.\n";
             levelMap[2,2].exits = new string[] {"North","West"};
 
         return levelMap;

@@ -10,36 +10,36 @@ class Player
     public int locY {get; set;}
 
     // Player object array (inventory)
-    public Object[] inventory {get; set;}
+    public Object[]? inventory {get; set;}          // Declare Object as a nullable variable (?) to clear a compiler warning
 
 
-    public void PlayerMove(string cmd, Room[,] levelMap, Player player)
+    public void Move(string cmd, Room[,] levelMap, Player player)
     {
-        string[] exits = levelMap[player.locX, player.locY].exits;
+        string[]? exits = levelMap[player.locX, player.locY].exits;      // Declare array as a nullable variable (?) to clear a compiler warning
 
         if(cmd == "N" && exits.Contains("North"))
         {
             player.locX--;
             Console.WriteLine("You move North.\n");
-            // DisplayRoom();
+            DisplayRoom(levelMap, player);
         }
         else if(cmd == "S" && exits.Contains("South"))
         {
             player.locX++;
             Console.WriteLine("You move South.\n");
-            // DisplayRoom();
+            DisplayRoom(levelMap, player);
         }
         else if(cmd == "E" && exits.Contains("East"))
         {
             player.locY++;
             Console.WriteLine("You move East.\n");
-            // DisplayRoom();
+            DisplayRoom(levelMap, player);
         }
         else if(cmd == "W" && exits.Contains("West"))
         {
             player.locY--;
             Console.WriteLine("You move West.\n");
-            // DisplayRoom();
+            DisplayRoom(levelMap, player);
         }
         else 
         {
@@ -50,8 +50,18 @@ class Player
 
     
     }   // end of PlayerMove()
-
-    public bool PlayerQuit()
+    public void DisplayRoom(Room[,] levelMap, Player player)
+    {   
+        Console.WriteLine(levelMap[player.locX,player.locY].title);
+        Console.WriteLine(levelMap[player.locX,player.locY].detail);
+        Console.Write("Obvious exits are: ");
+        foreach(string exit in levelMap[player.locX, player.locY].exits)
+        {
+            Console.Write($"{exit} ");
+        }
+        Console.WriteLine();
+    }
+    public bool Quit()
     {
         Console.Write("Are you sure? Progress will be lost. (Y/N): ");
         string qconf = Console.ReadLine().ToUpper();

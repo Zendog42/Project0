@@ -7,6 +7,7 @@
             // Global variables
             bool quit = false;
             string cmd = "";
+            
 
             // Initial game setup
             Console.Clear();
@@ -14,26 +15,30 @@
             Room[,] levelMap = Setup.Rooms();
             Object[] objects = Setup.Objects();
             Player player1 = Setup.Player();
-
+            player1.DisplayRoom(levelMap, player1);
             
             //Main Game Loop
             while(quit == false)
             {
-                DisplayRoom();
+                
                 Console.Write("Command: ");
                 cmd = Console.ReadLine().ToUpper();
 
-                // is this a move command?
+                // Evaluate for various command functions
                 if(cmd == "N" || cmd =="E" || cmd == "W" || cmd == "S")
                 {
-                    player1.PlayerMove(cmd, levelMap, player1);
-                    // Console.WriteLine("You would normally have moved here.");
-                    // PlayerMove();
+                    player1.Move(cmd, levelMap, player1);
+                }
+
+                else if(cmd == "L" || cmd == "LOOK")
+                {
+                    Console.Clear();
+                    player1.DisplayRoom(levelMap, player1);
                 }
 
                 else if(cmd == "Q")
                 {
-                    quit = player1.PlayerQuit();
+                    quit = player1.Quit();
                 }
 
                 else
@@ -53,16 +58,7 @@
             }
             
             
-            void DisplayRoom()
-            {   
-                Console.WriteLine(levelMap[player1.locX,player1.locY].title);
-                Console.WriteLine(levelMap[player1.locX,player1.locY].detail);
-                Console.Write("Obvious exits are: ");
-                foreach(string exit in levelMap[player1.locX, player1.locY].exits)
-                {
-                    Console.WriteLine(exit + " ");
-                }
-            }
+
 
                         
            
