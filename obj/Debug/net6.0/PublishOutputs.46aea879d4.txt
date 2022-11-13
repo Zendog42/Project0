@@ -1,0 +1,5 @@
+E:\Dev\rhoek\Project0\bin\Debug\net6.0\publish\Project0.exe
+E:\Dev\rhoek\Project0\bin\Debug\net6.0\publish\Project0.dll
+E:\Dev\rhoek\Project0\bin\Debug\net6.0\publish\Project0.deps.json
+E:\Dev\rhoek\Project0\bin\Debug\net6.0\publish\Project0.runtimeconfig.json
+E:\Dev\rhoek\Project0\bin\Debug\net6.0\publish\Project0.pdb
