@@ -12,10 +12,11 @@
             // Initial game setup
             Console.Clear();
             CmdHandler parser = new CmdHandler();
+            // Object[] levelObj = Setup.Objects();
             Room[,] levelMap = Setup.Rooms();
-            Object[] objects = Setup.Objects();
             Player player1 = Setup.Player();
             player1.DisplayRoom(levelMap, player1);
+            
             
             //Main Game Loop
             while(quit == false)
@@ -36,7 +37,7 @@
                     player1.DisplayRoom(levelMap, player1);
                 }
 
-                else if(cmd == "Q")
+                else if(cmd == "Q" || cmd == "QUIT")
                 {
                     quit = player1.Quit();
                 }

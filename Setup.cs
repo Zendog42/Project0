@@ -1,12 +1,22 @@
 
 static class Setup
 {
+    // public static Object[] Objects()
+    // {
+    //     Object[] levelObj = new Object[]{};
+    //     levelObj[0].title = "A wrench";
+
+    //     return levelObj;
+    // }
+
+
     public static Room[,] Rooms()
     {
+        
         // Setup 2D array for level
         Room[,] levelMap = new Room[3,3];
 
- // Overgrown Path
+            // Overgrown Path
             levelMap[0,0] = new Room();
             levelMap[0,0].title = "Overgrown Path";
             levelMap[0,0].detail = "An overgrown path wends its way north and south.\n" +
@@ -14,7 +24,11 @@ static class Setup
                                     "small field thickly choked with tall blades of razor-sharp grass and weeds.\n" +
                                     "The way forward is impassable for any but the most intrepid or the patently foolish.\n";
             levelMap[0,0].exits = new string[] {"South"};
-
+            // levelMap[0,0].objects[0] = new Wrench();
+            // levelMap[0,0].objects[1] = new Book();
+            // levelMap[0,0].objects[2] = new Wrench();
+            levelMap[0,0].levelObj.Add(new Wrench());
+            
             // Mysterious Culvert
             levelMap[0,1] = new Room();
             levelMap[0,1].title = "Mysterious Culvert";
@@ -93,16 +107,7 @@ static class Setup
 
         return levelMap;
     }
-
-    public static Object[] Objects()
-    {
-        // Setup object array for level
-        Object[] objects = new Object[]{};
-
-        return objects;
-
-    }
-    
+  
     public static Player Player()
     {
         Player player = new Player();
