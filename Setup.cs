@@ -27,7 +27,7 @@ static class Setup
             // levelMap[0,0].objects[0] = new Wrench();
             // levelMap[0,0].objects[1] = new Book();
             // levelMap[0,0].objects[2] = new Wrench();
-            levelMap[0,0].levelObj.Add(new Wrench());
+
             
             // Mysterious Culvert
             levelMap[0,1] = new Room();
@@ -65,6 +65,10 @@ static class Setup
                                     "The wooden panels have been pierced countless times by rusty implements and fasteners.\n"+
                                     "Daylight streams in, the dusty beams spraying mottled patterns of light upon the earthen floor.\n";
             levelMap[1,1].exits = new string[] {"South"};
+            levelMap[1,1].levelObj.Add(Armor.TrenchCoat());
+            levelMap[1,1].levelObj.Add(Weapon.Stick());
+            levelMap[1,1].levelObj.Add(Book.Manual());
+
         
             // Firepit
             levelMap[1,2] = new Room();

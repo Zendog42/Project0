@@ -59,6 +59,10 @@ class Player
         {
             Console.Write($"{exit} ");
         }
+        foreach(Object roomObj in levelMap[player.locX,player.locY].levelObj)
+        {
+            Console.Write($"\n{roomObj.title}");
+        }
         Console.WriteLine();
     }
     public bool Quit()
