@@ -1,4 +1,4 @@
-class Player
+public class Player
 {   // Player hit points (health)
     public int HP {get; set;}
 
@@ -9,9 +9,12 @@ class Player
     public int locX {get; set;}
     public int locY {get; set;}
 
-    // Player object array (inventory)
-    public Object[]? inventory {get; set;}          // Declare Object as a nullable variable (?) to clear a compiler warning
+    // Player object list (inventory)
+    // public Object[]? inventory {get; set;}          // Declare Object as a nullable variable (?) to clear a compiler warning
+    public List<Object> inventory = new List<Object>(); 
 
+    // Player quit status
+    public static bool quit = false;
 
     public void Move(string cmd, Room[,] levelMap, Player player)
     {
@@ -46,6 +49,7 @@ class Player
             Console.WriteLine("That is not a valid direction!");
             Thread.Sleep(1000);
             Console.Clear();
+            player.DisplayRoom(levelMap, player);
         }
 
     
@@ -61,11 +65,28 @@ class Player
         }
         foreach(Object roomObj in levelMap[player.locX,player.locY].levelObj)
         {
-            Console.Write($"\n{roomObj.title}");
+            Console.Write($"\n{roomObj.title} \t ({roomObj.summary})");
         }
         Console.WriteLine();
     }
-    public bool Quit()
+
+    public void Inventory(Player player)
+    {
+        if (player.inventory.Count == 0)
+        {
+            Console.WriteLine("Your pockets are empty.");
+        }
+        else
+        {
+            Console.WriteLine("You are carrying: ");
+            foreach(Object item in player.inventory)
+            {
+                Console.WriteLine($"{item.title}");
+            }
+        }
+
+    }
+    public void Quit()
     {
         Console.Write("Are you sure? Progress will be lost. (Y/N): ");
         string qconf = Console.ReadLine().ToUpper();
@@ -74,11 +95,11 @@ class Player
             Console.Clear();
             Console.WriteLine("From seemingly nowhere, Larry appears.");
             Console.WriteLine("Eyeing you with moderate yet unsurprised disappointment, he spits disdainfully on your shoe and mutters \"Figures\", as the world slowly fades away...");
-            return true;
+            Player.quit = true;
         }
         else
         {
-            return false;
+            return;
         }
     }   // end of PlayerQuit()
 }

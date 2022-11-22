@@ -1,9 +1,10 @@
-class Object
+public class Object
 {
-    public string? title {get; set;}        // Declare string as a nullable variable (?) to clear a compiler warning
-    public string? summary {get; set;}      // Declare string as a nullable variable (?) to clear a compiler warning
-    public string? detail {get; set;}       // Declare string as a nullable variable (?) to clear a compiler warning
-    public int weight {get; set;}
+    public string? label;       // Declare string as a nullable variable (?) to clear a compiler warning
+    public string? title ;      // Declare string as a nullable variable (?) to clear a compiler warning
+    public string? summary;     // Declare string as a nullable variable (?) to clear a compiler warning
+    public string? detail;      // Declare string as a nullable variable (?) to clear a compiler warning
+    public int weight;
 
     // public bool mutable{get; set;}
     // public int locX {get; set;}
@@ -17,7 +18,10 @@ class Armor : Object
     public static Armor TrenchCoat()
     {
         Armor tcoat = new Armor();
+        tcoat.label = "COAT";
         tcoat.title = "Trench Coat";
+        tcoat.summary = "A faded yet reliable trench coat.";
+        tcoat.detail = "The trench coat is simply-styled, a light tan in color, and frayed and worn in every seam. \nNotwithstanding the overwhelming odor of sweat and cigarette smoke emanating from it, it seems to be an excellent fit.";
         tcoat.defense = 1;
         tcoat.weight = 1;
 
@@ -34,7 +38,8 @@ class Weapon : Object
     public static Weapon Stick()
     {
         Weapon stick = new Weapon();
-        stick.title = "A Stick";
+        stick.label = "STICK";
+        stick.title = "Old Stick";
         stick.summary = "It's brown and sticky.";
         stick.weight = 1;
 
@@ -49,6 +54,7 @@ class Book : Object
     public static Book Manual()
     {
         Book manual = new Book();
+        manual.label = "MANUAL";
         manual.title = "Owner's Manual";
         manual.summary = "An operating manual for a 1988 Chevy Nova";
         manual.publish_date = 1988;
