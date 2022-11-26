@@ -1,9 +1,5 @@
-
-
 public class Element
 {
-
-
         string label;
         string summary;
         string detail;
@@ -29,9 +25,6 @@ public class Element
             solved = true;
         }
     }
-        // string detail;
-        // bool open = false;
-        // bool locked = true;
 }
 
 class Door : Element
@@ -50,25 +43,5 @@ class Door : Element
         SKey.key().GetType());
 
         return sDoor; 
-
     }
 }
-
-// class Key : Object
-// {
-//     public static Key Skey()
-//     {
-//         Key sKey = new Key();
-//         sKey.label = "KEY";
-//         sKey.title = "Silver Key";
-//         sKey.summary = "A slightly tarnished silver key.";
-
-//         return sKey;
-//     }
-// }
-
-            // Element door = new Element(
-            // "Sturdy Door", 
-            // "A sturdy wooden door.",
-            // true
-            // );

@@ -80,6 +80,7 @@ class SKey : Object
         return sKey;
     }
 }
+
 class BKey : Object
 {
     public static BKey key()
