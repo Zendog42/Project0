@@ -1,12 +1,11 @@
-
 static class Setup
 {
     // public static Object[] Objects()
     // {
-    //     Object[] levelObj = new Object[]{};
-    //     levelObj[0].title = "A wrench";
+    //     Object[] roomObj = new Object[]{};
+    //     roomObj[0].title = "A wrench";
 
-    //     return levelObj;
+    //     return roomObj;
     // }
 
 
@@ -63,12 +62,13 @@ static class Setup
             levelMap[1,1].title = "Garage";
             levelMap[1,1].detail = "Four rickety wooden walls prop up the sadly sagging roof of of a musty, barn-style garage.\n" +
                                     "The wooden panels have been pierced countless times by rusty implements and fasteners.\n"+
-                                    "Daylight streams in, the dusty beams spraying mottled patterns of light upon the earthen floor.\n";
+                                    "Daylight streams in, the dusty beams spraying mottled patterns of light upon the earthen floor.\n" +
+                                    "On the north wall, there is an ancient yet sturdy looking wooden door.";
             levelMap[1,1].exits = new string[] {"South"};
-            levelMap[1,1].levelObj.Add(Armor.TrenchCoat());
-            levelMap[1,1].levelObj.Add(Weapon.Stick());
-            levelMap[1,1].levelObj.Add(Book.Manual());
-
+            levelMap[1,1].roomObj.Add(Armor.TrenchCoat());
+            levelMap[1,1].roomObj.Add(Weapon.Stick());
+            levelMap[1,1].roomObj.Add(Book.Manual());
+            levelMap[1,1].roomElement.Add(Door.Sdoor());
         
             // Firepit
             levelMap[1,2] = new Room();
@@ -80,6 +80,7 @@ static class Setup
                                     "melted Coke bottles, and wads of aluminum foil with bits of dry yet greasy chicken still clinging to them.\n" +
                                     "Further north, the landscape is obscured by a strangling wall of sweet-smelling briars.";
             levelMap[1,2].exits = new string[] {"North","South"};
+            levelMap[1,2].roomObj.Add(SKey.key());
 
             // Back Door
             levelMap[2,0] = new Room();

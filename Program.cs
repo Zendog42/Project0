@@ -12,12 +12,11 @@
             // Initial game setup
             Console.Clear();
             Controller commands = new Controller();
-            // Object[] levelObj = Setup.Objects();
+            // Object[] roomObj = Setup.Objects();
             Room[,] levelMap = Setup.Rooms();
             Player player1 = Setup.Player();
             player1.DisplayRoom(levelMap, player1);
-            
-            
+
             //Main Game Loop
             while(Player.quit == false)
             {
@@ -62,14 +61,6 @@
                 // if cmd is in monsterEnums: 
                 // if cmd is directionEnums:
                 // string "North"
-            }
-            
-            
-
-
-                        
-           
+            }  
         }
-
-
     }
