@@ -5,7 +5,6 @@ public class Controller
 {
     string cmd = "";
     bool quit = false;
-    private List<Delegate> commands = new List<Delegate>();
 
     public void Input(Player player1, Room[,] levelMap)
     {
