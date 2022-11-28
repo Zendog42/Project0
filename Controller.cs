@@ -137,6 +137,13 @@ public class Controller
                     if(player1.inventory.Exists(x => x.label == noun))
                     {
                         Object keyItem = player1.inventory.Find(x => x.label == noun);
+
+                        // if (player1.inventory.Find(x => x.label == noun).GetType() is tKey)
+                        // {
+                        //     tKey tkeyItem = (tKey) player1.inventory.Find(x => x.label == noun);
+                        //     tkeyItem.magic();
+                        // }
+                     
                         if(levelMap[player1.locX,player1.locY].roomElement.Count > 0)
                         {
                             levelMap[player1.locX,player1.locY].roomElement[0].Use(keyItem);

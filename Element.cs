@@ -4,7 +4,7 @@ public class Element
         string summary;
         string detail;
         bool solved;
-        Type solution = typeof (Object);
+        Type solution;
 
     public Element(string label, string summary, string detail, Type solution)
     {
@@ -34,14 +34,15 @@ class Door : Element
 
     }
 
-    public static Door Sdoor()
+}
+    class SilverDoor : Door
     {
-        Door sDoor = new Door(
+        public SilverDoor() : base(
         "door",
         "a wooden door",
         "A detailed description of the door.",
-        SKey.key().GetType());
+        typeof(SilverKey))
+        {
 
-        return sDoor; 
+        }
     }
-}

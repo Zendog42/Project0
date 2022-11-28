@@ -55,10 +55,11 @@ static class Setup
                                 "Daylight streams in, the dusty beams spraying mottled patterns of light upon the earthen floor.\n" +
                                 "On the north wall, there is an ancient yet sturdy looking wooden door.";
         levelMap[1,1].exits = new string[] {"South"};
-        levelMap[1,1].roomObj.Add(Armor.TrenchCoat());
-        levelMap[1,1].roomObj.Add(Weapon.Stick());
-        levelMap[1,1].roomObj.Add(Book.Manual());
-        levelMap[1,1].roomElement.Add(Door.Sdoor());
+        levelMap[1,1].roomObj.Add(new TrenchCoat());
+        levelMap[1,1].roomObj.Add(new Stick());
+        levelMap[1,1].roomObj.Add(new OwnerManual());
+        levelMap[1,1].roomElement.Add(new SilverDoor());
+
     
         // Firepit
         levelMap[1,2] = new Room();
@@ -70,7 +71,8 @@ static class Setup
                                 "melted Coke bottles, and wads of aluminum foil with bits of dry yet greasy chicken still clinging to them.\n" +
                                 "Further north, the landscape is obscured by a strangling wall of sweet-smelling briars.";
         levelMap[1,2].exits = new string[] {"North","South"};
-        levelMap[1,2].roomObj.Add(SKey.key());
+        levelMap[1,2].roomObj.Add(new TourmalineKey());
+        // levelMap[1,2].roomObj.Add(new Key("tKey", "Tourmaline Key", "A fancy key made of tourmaline", "tourmaline"));   // Optional (possibly less complicated) call
 
         // Back Door
         levelMap[2,0] = new Room();
