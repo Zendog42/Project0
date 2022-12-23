@@ -123,7 +123,7 @@ public class Controller
                     break;
 
                     case "GET":
-                    
+                    Console.WriteLine("You are already in possession of that.");
                     break;
 
                     case "DROP":

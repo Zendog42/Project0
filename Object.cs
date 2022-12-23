@@ -17,7 +17,9 @@ public class Object
         this.title = title;
         this.summary = summary;
         this.detail = detail;
+    
     }
+
 }
 
 
@@ -28,7 +30,7 @@ class Weapon : Object
 
     public Weapon(string label, string title, string summary, string detail, int damage) : base(label, title, summary, detail)
     {
-
+        this.damage = damage;
     }
 
     // public static Weapon Stick()
@@ -43,10 +45,17 @@ class Weapon : Object
 
 class Stick : Weapon
 {
-    public Stick() : base("STICK","Old Stick","It's brown and sticky.","It looks old, yet sturdy enough to defend yourself with it.", 1)
+    public Stick() : base(
+    /*label*/   "STICK",
+    /*title*/   "Old Stick",
+    /*summary*/ "It's brown and sticky.",
+    /*detail*/  "It looks old, yet sturdy enough to defend yourself with it.",
+    /*damage*/ 1
+     )
     {
 
     }
+
 }
 
 
@@ -71,8 +80,14 @@ class Armor : Object
 // TRENCH COAT
 class TrenchCoat : Armor
 {
+    string label = "COAT";
+    string title = "Trench Coat";
+    string summary = "A faded yet reliable trench coat.";
+    string detail = "The trench coat is simply-styled, a light tan in color, and frayed and worn in every seam. \nNotwithstanding the overwhelming odor of sweat and cigarette smoke emanating from it, it seems to be an excellent fit.";
+    int resilience = 1;
     public TrenchCoat() : base("COAT","Trench Coat","A faded yet reliable trench coat.","The trench coat is simply-styled, a light tan in color, and frayed and worn in every seam. \nNotwithstanding the overwhelming odor of sweat and cigarette smoke emanating from it, it seems to be an excellent fit.",1)
     {
+        label = "COAT";
 
     }
 }
