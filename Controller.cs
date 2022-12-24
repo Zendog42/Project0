@@ -137,7 +137,7 @@ public class Controller
                         List<string> winItems = new List<string>();
                         winItems.Add("COAT");
                         winItems.Add("SKATEBOARD");
-                        winItems.Add("SMOKES");
+                        winItems.Add("CIGARETTES");
                         // Steps through the player inventory using a Lambda function to check existence of each 'x' object in player.inventory
                         // This confirms that all winItems members exist in player.inventory
                         
@@ -148,7 +148,10 @@ public class Controller
                         // }
                         if(gameOver == true)
                         {
-                            Console.WriteLine("You now have the Car Key.");
+                            Console.WriteLine("The image in the mirror, at first wavery, now clearly resolves into the image of a laidback, hoopy frood \n" +  
+                            "with a special sense of style and a complete lack of regard for convention. In the reflection, your image gives a lopsided grin, \n" +
+                            "and in its hand there appears to be a car key. Looking down, you realize that you are now, in fact, holding a car key just as the image reflects. \n" +
+                            "You now have the Car Key.");
                             player1.inventory.Add(new CarKey());
                         }
                         else
@@ -193,12 +196,6 @@ public class Controller
                     if(player1.inventory.Exists(x => x.label == noun))
                     {
                         Object keyItem = player1.inventory.Find(x => x.label == noun);
-
-                        // if (player1.inventory.Find(x => x.label == noun).GetType() is tKey)
-                        // {
-                        //     tKey tkeyItem = (tKey) player1.inventory.Find(x => x.label == noun);
-                        //     tkeyItem.magic();
-                        // }(levelMap[player1.locX,player1.locY].roomElement.Count > 0)
                      
                         if(levelMap[player1.locX,player1.locY].roomElement.Count > 0)
                         {

@@ -29,7 +29,8 @@ class Skateboard : Object
         "SKATEBOARD",
         "Well-Used Skateboard",
         "This skateboard is really beat up.",
-        "There are a lot of details here; more later.")
+        "The dilapidated skateboard is bowed from supporting angsty teenagers for hundreds of miles, \n" +
+        "the edges battered and splintered from dozens of skateboard trick attempts (both successfull and not).")
     {
         this.weight = weight;
     }
@@ -38,10 +39,11 @@ class Skateboard : Object
 class Cigarettes : Object
 {
     public Cigarettes(int weight) : base(
-        "SMOKES",
-        "A pack of Marlboro 'Reds'",
+        "CIGARETTES",
+        "Pack of Marlboro 'Reds'",
         "Twenty nails to pound into your coffin.",
-        "There are a lot of details here; more later.")
+        "A slightly crumpled, half-expended pack of cigarettes forms a dull wad in your fist.\n" +
+        "tucked inside the cellophane wrapper is a small book of matches bearing the logo `Jerry's Super Value`.")
     {
         this.weight = weight;
     }
@@ -73,8 +75,6 @@ class Stick : Weapon
 
 }
 
-
-
     // DEFINITIONS FOR BASE "ARMOR" OBJECTS //
 class Armor : Object
 {
@@ -82,12 +82,7 @@ class Armor : Object
 
     public Armor(string label, string title, string summary, string detail, int resilience) : base(label, title, summary, detail)
     {
-        // tcoat.label = "COAT";
-        // tcoat.title = "Trench Coat";
-        // tcoat.summary = "A faded yet reliable trench coat.";
-        // tcoat.detail = "The trench coat is simply-styled, a light tan in color, and frayed and worn in every seam. \nNotwithstanding the overwhelming odor of sweat and cigarette smoke emanating from it, it seems to be an excellent fit.";
-        // tcoat.defense = 1;
-        // tcoat.weight = 1;
+
     }
 
 }
@@ -139,7 +134,7 @@ class Key : Object
 class CarKey : Key
 {
 
-    public CarKey() : base("KEY", "Car Key", "A key of unknown origin.", "It seems as tough it could be used in an automobile.","metal")
+    public CarKey() : base("KEY", "Car Key", "A key of unknown origin.", "It seems as though it could be used in an automobile.","metal")
     {
         // no code function
     }
