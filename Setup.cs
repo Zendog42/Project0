@@ -53,12 +53,16 @@ static class Setup
         levelMap[1,1].detail = "Four rickety wooden walls prop up the sadly sagging roof of of a musty, barn-style garage.\n" +
                                 "The wooden panels have been pierced countless times by rusty implements and fasteners.\n"+
                                 "Daylight streams in, the dusty beams spraying mottled patterns of light upon the earthen floor.\n" +
-                                "On the north wall, there is an ancient yet sturdy looking wooden door.";
+                                "On the north wall, there is an ancient yet sturdy iron door, coated with years of rust.\n" + 
+                                "There is also a mirror here.";
         levelMap[1,1].exits = new string[] {"South"};
         levelMap[1,1].roomObj.Add(new TrenchCoat());
+        levelMap[1,1].roomObj.Add(new Skateboard(10));
+        levelMap[1,1].roomObj.Add(new Cigarettes(1));
         levelMap[1,1].roomObj.Add(new Stick());
         levelMap[1,1].roomObj.Add(new OwnerManual());
-        levelMap[1,1].roomElement.Add(new SilverDoor());
+        levelMap[1,1].roomElement.Add(new ChevyNova());
+        levelMap[1,1].roomElement.Add(new Mirror());
 
     
         // Firepit
@@ -71,8 +75,7 @@ static class Setup
                                 "melted Coke bottles, and wads of aluminum foil with bits of dry yet greasy chicken still clinging to them.\n" +
                                 "Further north, the landscape is obscured by a strangling wall of sweet-smelling briars.";
         levelMap[1,2].exits = new string[] {"North","South"};
-        levelMap[1,2].roomObj.Add(new TourmalineKey());
-        // levelMap[1,2].roomObj.Add(new Key("tKey", "Tourmaline Key", "A fancy key made of tourmaline", "tourmaline"));   // Optional (possibly less complicated) call
+        levelMap[1,2].roomObj.Add(new CarKey());
 
         // Back Door
         levelMap[2,0] = new Room();

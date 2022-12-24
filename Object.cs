@@ -22,6 +22,30 @@ public class Object
 
 }
 
+    // DEFINITIONS FOR BASE "WIN" OBJECTS //
+class Skateboard : Object
+{
+    public Skateboard(int weight) : base(
+        "SKATEBOARD",
+        "Well-Used Skateboard",
+        "This skateboard is really beat up.",
+        "There are a lot of details here; more later.")
+    {
+        this.weight = weight;
+    }
+}
+
+class Cigarettes : Object
+{
+    public Cigarettes(int weight) : base(
+        "SMOKES",
+        "A pack of Marlboro 'Reds'",
+        "Twenty nails to pound into your coffin.",
+        "There are a lot of details here; more later.")
+    {
+        this.weight = weight;
+    }
+}
 
     // DEFINITIONS FOR BASE "WEAPON" OBJECTS //
 class Weapon : Object
@@ -32,15 +56,6 @@ class Weapon : Object
     {
         this.damage = damage;
     }
-
-    // public static Weapon Stick()
-    // {
-    //     stick.interactive = true;
-    //     stick.label = "STICK";
-    //     stick.title = "Old Stick";
-    //     stick.summary = "It's brown and sticky.";
-    //     stick.weight = 1;
-    // }
 }
 
 class Stick : Weapon
@@ -105,7 +120,7 @@ class Book : Object
 // OWNER'S MANUAL
 class OwnerManual : Book
 {
-    public OwnerManual() : base("MANUAL","Chevy Nova Owner's Manual","An operating manual for a 1988 Chevy Nova","It has an illustration of the 1988 Checy Nova on the cover. Perhaps it has some helpful information held within?",1988)
+    public OwnerManual() : base("MANUAL","Chevy Nova Owner's Manual","An operating manual for a 1988 Chevy Nova","It has an illustration of the 1988 Chevy Nova on the cover. Perhaps it has some helpful information held within?",1988)
     {
     }
 }
@@ -120,6 +135,33 @@ class Key : Object
     }
 }
 
+// CAR KEY
+class CarKey : Key
+{
+
+    public CarKey() : base("KEY", "Car Key", "A key of unknown origin.", "It seems as tough it could be used in an automobile.","metal")
+    {
+        // no code function
+    }
+    public void Magic() {
+        // does magic
+        Console.WriteLine("Magic done!");
+    }
+}
+
+// GENERIC KEY
+class RustyKey : Key
+{
+
+    public RustyKey() : base("RKEY", "Rusty Key", "A key; it's super rusty.", "Seriously, it's the rustiest key you've ever seen.","rust")
+    {
+        // no code function
+    }
+    public void Magic() {
+        // does magic
+        Console.WriteLine("Magic done!");
+    }
+}
 
 // TOURMALINE KEY
 class TourmalineKey : Key
@@ -128,10 +170,6 @@ class TourmalineKey : Key
     public TourmalineKey() : base("TKEY", "Tourmaline Key", "A fancy key made of tourmaline", "Seriously, it's the fanciest key you've ever seen, and it's made of tourmaline.","tourmaline")
     {
         // no code function
-    }
-    public void Magic() {
-        // does magic
-        Console.WriteLine("Magic done!");
     }
 }
 

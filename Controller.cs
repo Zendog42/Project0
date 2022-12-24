@@ -81,13 +81,15 @@ public class Controller
             string[] splitCmds = cmd.Split(' ');
             string verb = splitCmds[0];
             string noun = splitCmds[1];
-            bool inRoom = false;
+            bool inRoomObj = false;
+            bool inRoomElement = false;
             bool onPlayer = false;
 
-            inRoom = levelMap[player1.locX,player1.locY].roomObj.Exists(x => x.label == noun);
+            inRoomObj = levelMap[player1.locX,player1.locY].roomObj.Exists(x => x.label == noun);
+            inRoomElement = levelMap[player1.locX,player1.locY].roomElement.Exists(x => x.label == noun);
             onPlayer = player1.inventory.Exists(x => x.label == noun);
                 
-            if(inRoom == true)
+            if(inRoomObj == true)
             {
                 switch(verb)
                 {
@@ -113,7 +115,61 @@ public class Controller
                     break;
                 }
             }
+            else if(inRoomElement == true)
+            {
+                switch(verb)
+                {
+                    case "EXAMINE":
+                    Console.WriteLine(levelMap[player1.locX,player1.locY].roomElement.Find(x => x.label.ToUpper() == noun).detail);
+                    break;
 
+                    case "GET":
+                    Console.WriteLine($"You can't get a {noun.ToLower()}.");
+                    break;
+
+                    case "DROP":
+                    Console.WriteLine("You don't have that.");
+                    break;
+
+                    case "USE":
+                    if(noun == "MIRROR")
+                    {
+                        List<string> winItems = new List<string>();
+                        winItems.Add("COAT");
+                        winItems.Add("SKATEBOARD");
+                        winItems.Add("SMOKES");
+                        // Steps through the player inventory using a Lambda function to check existence of each 'x' object in player.inventory
+                        // This confirms that all winItems members exist in player.inventory
+                        
+                        bool gameOver = winItems.All(x => player1.inventory.Any(y => x == y.label));
+                        // if(player1.inventory.Exists(x => x.label == "coat") && player1.inventory.Exists(x => x.label == "skateboard") && player1.inventory.Exists(x => x.label == "smokes"))
+                        // {
+
+                        // }
+                        if(gameOver == true)
+                        {
+                            Console.WriteLine("You now have the Car Key.");
+                            player1.inventory.Add(new CarKey());
+                        }
+                        else
+                        {
+                            Console.WriteLine("The image is ambiguous and vague, as though you don't quite have everything.");
+                        }
+                    }
+                    else if(noun == "CAR")
+                    {
+                        Console.WriteLine("That's not running right now.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nothing to use.");
+                    }
+                    break;
+
+                    default:
+                    break;
+                }
+            }
             else if(onPlayer == true)
             {
                 switch(verb)
@@ -142,11 +198,15 @@ public class Controller
                         // {
                         //     tKey tkeyItem = (tKey) player1.inventory.Find(x => x.label == noun);
                         //     tkeyItem.magic();
-                        // }
+                        // }(levelMap[player1.locX,player1.locY].roomElement.Count > 0)
                      
                         if(levelMap[player1.locX,player1.locY].roomElement.Count > 0)
                         {
                             levelMap[player1.locX,player1.locY].roomElement[0].Use(keyItem);
+                        }
+                        else if (levelMap[player1.locX,player1.locY].roomElement.Count == 0)
+                        {
+                            Console.WriteLine("Nothing to use.");
                         }
                     }
 
@@ -156,6 +216,10 @@ public class Controller
                     break;
 
                 }
+            }
+            else
+            {
+                Console.WriteLine($"I don't see a {noun.ToLower()} here.");
             }
         }     
     }
