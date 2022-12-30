@@ -30,7 +30,7 @@ class Skateboard : Object
         "Well-Used Skateboard",
         "This skateboard is really beat up.",
         "The dilapidated skateboard is bowed from supporting angsty teenagers for hundreds of miles, \n" +
-        "the edges battered and splintered from dozens of skateboard trick attempts (both successfull and not).")
+        "the edges battered and splintered from dozens of skateboard trick attempts (both successful and not).")
     {
         this.weight = weight;
     }
@@ -43,7 +43,7 @@ class Cigarettes : Object
         "Pack of Marlboro 'Reds'",
         "Twenty nails to pound into your coffin.",
         "A slightly crumpled, half-expended pack of cigarettes forms a dull wad in your fist.\n" +
-        "tucked inside the cellophane wrapper is a small book of matches bearing the logo `Jerry's Super Value`.")
+        "Tucked inside the cellophane wrapper is a small book of matches bearing the logo `Jerry's Super Value`.")
     {
         this.weight = weight;
     }
