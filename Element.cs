@@ -40,10 +40,15 @@ public class Element
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("...Larry awakes from a doze in his recliner. Perpetually bored, he glances out the window, where a thick column of black smoke can be seen across the townscape.\n" +
+            Console.WriteLine("...Larry awakes from a doze in his recliner. Perpetually bored, he glances out the window, \n" +
+            "where a thick column of black smoke can be seen across the townscape.\n" +
             "Staring at the the growing blaze for a long moment, the sound of small explosions echo across the featureless rural sky.\n" +
-            "At this, Larry smirks acridly, puts his hands on his hips and chuckles sardonically. With an uninterested yawn, he returns to his recliner, and turns on his television.\n" +
-            "As re-runs of 'The David Letterman Show' flicker to life, he nods quietly to himself, imagining how his life could have been if he had married a former drama student.");
+            "At this, Larry smirks acridly, puts his hands on his hips and chuckles sardonically. With an uninterested yawn, \n" + 
+            "he returns to his recliner, and turns on his television.\n" +
+            "As re-runs of 'The David Letterman Show' flicker to life, he nods quietly to himself, imagining how his life could have been \n" +
+            "if he had married a former drama student.");
+            Console.WriteLine("Press any key to close the window:");
+            Console.ReadLine();
             Player.quit = true;
         }
     }
