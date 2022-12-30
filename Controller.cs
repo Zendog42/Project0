@@ -149,8 +149,9 @@ public class Controller
                         if(gameOver == true)
                         {
                             Console.WriteLine("The image in the mirror, at first wavery, now clearly resolves into the image of a laidback, hoopy frood \n" +  
-                            "with a special sense of style and a complete lack of regard for convention. In the reflection, your image gives a lopsided grin, \n" +
-                            "and in its hand there appears to be a car key. Looking down, you realize that you are now, in fact, holding a car key just as the image reflects. \n" +
+                            "with a special sense of style and a complete lack of regard for convention.\n" +
+                            "In the reflection, your image gives a lopsided grin, and in its hand there appears to be a car key. \n" +
+                            "Looking down, you realize that you are now, in fact, holding a car key just as the image reflects. \n" +
                             "You now have the Car Key.");
                             player1.inventory.Add(new CarKey());
                         }
