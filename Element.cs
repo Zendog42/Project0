@@ -24,8 +24,7 @@ public class Element
             Console.WriteLine("Screwing a Marlboro purposefully into your lips, a quick wrist snap ignites a match from the 'Jerry's' matchbook.\n" +
             "A sense of purpose floods your psyche as you fling the oilcloth from the waiting car, which you can now see is a deep, \n" +
             "wine red color. Tucking yourself behind the wheel, you slide the seat back, adjust the sideview mirror, and twist the \n" + 
-            "key in the ignition. \n" +
-            "The car sputters, then roars to life! \n" +
+            "key in the ignition: The car sputters, then roars to life! \n" +
             "Cranking the gear level on the side of the steering column into 'Drive', you firmly press the accelerator.\n" +
             "The car lurches forward, then smoothly cruises out of the garage. Embarking upon your new adventure, you casually\n" +
             "flick the lit cigarette over your shoulder and out the window, where it happens to land in puddles of ancient oil stains\n" +
