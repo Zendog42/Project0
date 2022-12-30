@@ -28,13 +28,11 @@ public class Element
             "The car sputters, then roars to life! \n" +
             "Cranking the gear level on the side of the steering column into 'Drive', you firmly press the accelerator.\n" +
             "The car lurches forward, then smoothly cruises out of the garage. Embarking upon your new adventure, you casually \n" +
-            "flick the lit cigarette over your shoulder and out the window, where it happens to land in a puddle of ancient oil stains\n" +
-            "pooling on the dirt floor. As you pull out onto the street and turn towards the edge of town, a small column of dark smoke\n" +
+            "flick the lit cigarette over your shoulder and out the window, where it happens to land in puddles of ancient oil stains\n" +
+            "pooling on the dirt floor. As you turn onto the street and drive towards the edge of town, small columns of dark smoke\n" +
             "goes unnoticed in the rearview mirror. You turn on to the highway out of town, and in only minutes, the small rural town \n" + 
             "disappears over the horizon, never to be seen again...");
             // Console.WriteLine($"Object type is: {keyItem.GetType()}");
-            Console.WriteLine();
-            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
@@ -43,7 +41,7 @@ public class Element
             "black smoke can be seen across the townscape. Staring at the the growing blaze for a long moment, the sound of small \n" + 
             "explosions echo across the featureless rural sky. At this, Larry smirks acridly, puts his hands on his hips and chuckles \n" + 
             "sardonically. With an uninterested yawn, he returns to his recliner, and turns on his television.\n" +
-            "As re-runs of 'The David Letterman Show' flicker to life, he nods quietly to himself, imagining how life could have been \n" +
+            "As re-runs of 'The David Letterman Show' flicker to life, he nods quietly to himself, imagining how life could have been\n" +
             "if he had married a former drama student.");
             Console.WriteLine("You have completed the game. Press any key to close the window:");
             Console.ReadLine();
