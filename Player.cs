@@ -99,7 +99,7 @@ public class Player
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("Press any key to close the window:");
+            Console.WriteLine("Press 'Enter' key to close the window:");
             Console.ReadLine();
             Player.quit = true;
         }
