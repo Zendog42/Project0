@@ -94,7 +94,8 @@ public class Player
         {
             Console.Clear();
             Console.WriteLine("From seemingly nowhere, Larry appears.");
-            Console.WriteLine("Eyeing you with moderate yet unsurprised disappointment, he spits disdainfully on your shoe and mutters \"Figures\", as the world slowly fades away...");
+            Console.WriteLine("Eyeing you with moderate yet unsurprised disappointment, he spits disdainfully on your shoe and mutters \"Figures\", \n" +
+                              "as the world slowly fades away...");
             Console.WriteLine("Press any key to close the window:");
             Console.ReadLine();
             Player.quit = true;

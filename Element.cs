@@ -29,19 +29,21 @@ public class Element
             "The car lurches forward, then smoothly cruises out of the garage. Embarking upon your new adventure, you casually\n" +
             "flick the lit cigarette over your shoulder and out the window, where it happens to land in puddles of ancient oil stains\n" +
             "pooling on the dirt floor. As you turn onto the street and drive towards the edge of town, small columns of dark smoke\n" +
-            "go unnoticed in the rearview mirror. You turn onto the highway towards a new life. In only minutes the small rural town\n" + 
+            "go unnoticed in the rearview mirror. You turn onto the highway towards a new life; in only minutes the small rural town\n" + 
             "disappears over the horizon, never to be seen again...");
             // Console.WriteLine($"Object type is: {keyItem.GetType()}");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("...Larry awakes from a doze in his recliner. Perpetually bored, he glances out the window, where a thick column of\n" +
-            "black smoke can be seen across the townscape. Staring at the the growing blaze for a long moment, the sound of small \n" + 
-            "explosions echo across the featureless rural sky. At this, Larry smirks acridly, puts his hands on his hips and chuckles\n" + 
-            "sardonically. With an uninterested yawn, he returns to his recliner and turns on his television.\n" +
+            Console.WriteLine("...Larry awakens from a doze in his recliner. Perpetually bored, he glances out the window, where a thick column of\n" +
+            "black smoke can be seen above the townscape. As he stares at the the growing blaze for a long moment, the sound of small\n" + 
+            "explosions echo across the featureless gray sky. At this, Larry smirks acridly, puts his hands on his hips and utters a\n" + 
+            "caustic chuckle. Stretching with an uninterested yawn, he returns to his recliner and turns on his television.\n" +
             "As re-runs of 'The David Letterman Show' flicker to life, he nods quietly to himself, imagining how life could have been\n" +
-            "if he had married a former drama student.");
+            "if he had married a former drama student...");
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("You have completed the game. Press any key to close the window:");
             Console.ReadLine();
             Player.quit = true;

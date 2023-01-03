@@ -18,10 +18,10 @@ static class Setup
         // Mysterious Culvert
         levelMap[0,1] = new Room();
         levelMap[0,1].title = "Mysterious Culvert";
-        levelMap[0,1].detail = "Travelling east from the thorny tangle of blackberry vines, the\n" +
+        levelMap[0,1].detail = "Travelling west from the thorny tangle of blackberry vines, the\n" +
                                 "underbrush thins out, revealing the bank of a small creek.\n" +
                                 "Though the creek itself appears innocuous, it flows into a pool at the foreboding\n" +
-                                "entrance of a cavernous tunnel. The quietly tricking water suddenly exudes a\n" +
+                                "entrance of a cavernous tunnel. The quietly trickling water suddenly exudes a\n" +
                                 "sinister feeling into the air as it disappears into the inky depths of the culvert.\n";
         levelMap[0,1].exits = new string[] {"East"};
 
