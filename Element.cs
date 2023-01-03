@@ -44,7 +44,7 @@ public class Element
             "if he had married a former drama student...");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("You have completed the game. Press any key to close the window:");
+            Console.WriteLine("You have completed the game. Press 'Enter' key to close the window:");
             Console.ReadLine();
             Player.quit = true;
         }
